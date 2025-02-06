@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         popup.classList.remove("bounce-in"); // Reset animation
     });
 
-    // NO Button Runs Away
+     // NO Button Runs Away
     const moveButton = () => {
     playSound('boing1.mp3');
     let newX, newY;
