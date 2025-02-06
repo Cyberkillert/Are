@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // NO Button Runs Away
     noBtn.addEventListener("mouseover", () => {
+
+				playSound('boing1.mp3'); 
     let newX, newY;
     const minMove = 100; // Minimum distance to move (pixels)
     const maxX = window.innerWidth - noBtn.offsetWidth;
