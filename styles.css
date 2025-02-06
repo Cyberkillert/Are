@@ -1,0 +1,128 @@
+/* Funny Shake Animation */
+@keyframes shake {
+    0% { transform: translate(2px, 2px) rotate(2deg); }
+    25% { transform: translate(-2px, -2px) rotate(-2deg); }
+    50% { transform: translate(2px, -2px) rotate(2deg); }
+    75% { transform: translate(-2px, 2px) rotate(-2deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.shake {
+    animation: shake 0.3s linear 3;
+}
+
+/* Popup Bounce In Animation */
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    60% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+.bounce-in {
+    animation: bounceIn 0.5s ease-out;
+}
+
+/* Emoji Explosion Animation */
+@keyframes explode {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2.5) translateY(-100px); opacity: 0; }
+}
+
+.explosion-emoji {
+    position: absolute;
+    font-size: 2.5rem;
+    animation: explode 1.5s ease-out forwards;
+    pointer-events: none;
+}
+
+/* Funny Yellow Theme */
+body {
+     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #fff;
+    overflow: hidden;
+    transition: background 0.3s ease;
+}
+/* Emoji Floating Background */
+.emoji-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.emoji {
+    position: absolute;
+    font-size: 2.5rem;
+    animation: floatEmoji 5s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+/* Funny Buttons */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* YES Button */
+#yesBtn {
+    background-color: blue;
+    color: #fff;
+}
+
+#yesBtn:hover {
+    background-color: blue;
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* NO Button Runs Away */
+#noBtn {
+    background-color: #fff;
+    color: black;
+    position: absolute;
+}
+
+#noBtn:hover {
+    background-color: #fff;
+    transform: scale(1.1);
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content p {
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 20px;
+}
