@@ -25,9 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // NO Button Runs Away
-    noBtn.addEventListener("mouseover", () => {
-
-				playSound('boing1.mp3'); 
+    const moveButton = () => {
+    playSound('boing1.mp3');
     let newX, newY;
     const minMove = 100; // Minimum distance to move (pixels)
     const maxX = window.innerWidth - noBtn.offsetWidth;
@@ -43,8 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     noBtn.style.left = `${newX}px`;
     noBtn.style.top = `${newY}px`;
-    playSound('whoosh.mp3');
-});
+};
+
+noBtn.addEventListener("mouseover", moveButton);
+noBtn.addEventListener("click", moveButton);
 
     // Function to play sound
     function playSound(file) {
