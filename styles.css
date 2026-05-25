@@ -47,12 +47,6 @@ body {
     overflow: hidden;
     transition: background 0.3s ease;
 }
-
-.h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 /* Emoji Floating Background */
 .emoji-container {
     position: fixed;
